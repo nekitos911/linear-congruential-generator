@@ -30,6 +30,11 @@ public class Benchmark {
     }
 
     private static long createRandomArray() {
+
+        // warmup
+        for (int i = 0; i < ITERATIONS; i++) {
+            System.out.println(LCGRandom.next());
+        }
         double res = 0.0d;
         var begin = Instant.now();
 
